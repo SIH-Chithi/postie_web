@@ -7,7 +7,7 @@ module.exports = {
 		"lib/**/*.{ts,tsx}",
 		"pages/**/*.{ts,tsx}",
 		"styles/**/*.{ts,tsx}",
-		
+
 
 	
 	],
@@ -63,7 +63,13 @@ module.exports = {
     				'3': 'hsl(var(--chart-3))',
     				'4': 'hsl(var(--chart-4))',
     				'5': 'hsl(var(--chart-5))'
-    			}
+    			},
+				primaryColor: "#CD3431",
+				inputBackgroundColor: "#F7C2C1",
+				primaryTextColor: "#FAFAFA",
+				shadowColor:"#fcf8f6",
+				screenBackgroundColor:"#F5F5F5",
+				headingColor:"#333",
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
@@ -72,6 +78,6 @@ module.exports = {
     		}
     	}
     },
-	plugins: [import("tailwindcss-animate")],
+	plugins:[import("tailwindcss-animate" )],
   }
   
