@@ -32,7 +32,7 @@ interface AppSidebarProps {
 
 export function AppSidebar({ items, userInfo, onLogout }: AppSidebarProps) {
   return (
-    <Sidebar className=" bg-white my-4 absolute bottom-6 border ml-3 rounded-xl shadow-xl w-64 ">
+    <Sidebar className=" bg-white my-4 absolute bottom-6 border ml-3 rounded-xl  shadow-xl w-64 ">
       
 
       {/* User Info */}

@@ -18,7 +18,7 @@ function DashBoard_Status_Number({ items }: IStats) {
       {items.map((state, index) => (
         <div
           key={index}
-          className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 ease-in-out flex items-center justify-between space-x-3"
+          className="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow duration-200 ease-in-out flex items-center justify-between space-x-3"
         >
           <div
             className={`w-12 h-12 flex items-center justify-center rounded-full ${state.iconBg} text-white`}

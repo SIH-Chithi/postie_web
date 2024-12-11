@@ -56,7 +56,8 @@ export function Component({ chartData }: IChart) {
       <CardTitle>Traffic Status</CardTitle>
       <CardDescription>Traffic Status for last 7 days </CardDescription>
     </CardHeader>
-    <ChartContainer className="h-[220px]  " config={{}}>
+    
+    <ChartContainer className="h-[300px]  " config={{}}>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={chartData}

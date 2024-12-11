@@ -23,7 +23,7 @@ import {
     return (
       <Table>
         <TableCaption>A list of your recent Parcels</TableCaption>
-        <TableHeader>
+        <TableHeader className="bg-gray-200">
           <TableRow>
             <TableHead className="w-[100px]">OrderID</TableHead>
             <TableHead>Status</TableHead>

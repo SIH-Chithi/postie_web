@@ -19,7 +19,9 @@ import {
 type ChartData = {
   day: string
   parcel: number
-  Document: number
+  document: number,
+express: number,
+  letter: number
 }
 
 interface IChart {
@@ -36,8 +38,8 @@ export function Linechart({ chartData }: IChart) {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-10">
-        <CardTitle>Parcel Delivery</CardTitle>
-        <CardDescription>Parcel delivery status for the last 7 days</CardDescription>
+        <CardTitle>Line Graph - Parcel Type </CardTitle>
+        <CardDescription>Parcel type status for the last 7 days</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer config={chartConfig}>
@@ -70,13 +72,30 @@ export function Linechart({ chartData }: IChart) {
               dot={false}
             />
             <Line
-              dataKey="Document"
+              dataKey="document"
               name="Documents"
               type="monotone"
               stroke="#f1c232" 
               strokeWidth={2}
               dot={false}
             />
+            <Line 
+              dataKey="express"
+              name="Express Parcel"
+              type="monotone"
+              stroke="#008000" 
+              strokeWidth={2}
+              dot={false}
+            />
+            <Line
+              dataKey="letter"
+              name="Letters"
+              type="monotone"
+              stroke="#0000FF" 
+              strokeWidth={2}
+              dot={false}
+            />
+
           </LineChart>
         </ChartContainer>
       </CardContent>

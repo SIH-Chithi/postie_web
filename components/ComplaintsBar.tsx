@@ -47,29 +47,26 @@ interface IChart {
   chartData: ChartData[];
 }
 
-export function Piechart({ chartData }: IChart) {
+export function Complaints({ chartData }: IChart) {
   const totalVisitors = React.useMemo(() => {
     return chartData.reduce((acc, curr) => acc + curr.value, 0)
   }, [chartData]);
 
   return (
     <Card className="flex w-full flex-col">
-      <CardHeader className="items-center pb-6">
-        <CardTitle>Parcel Type</CardTitle>
-        <CardDescription>Total Parcel Type for today</CardDescription>
-      </CardHeader>
+      
       <CardContent className="">
-        <ChartContainer config={chartConfig} className="mx-auto w-full aspect-square max-h-[400px]">
-          <PieChart className="h-full w-full">
+        <ChartContainer config={chartConfig} className="mx-auto w-full aspect-square max-h-[150px]">
+          <PieChart >
             <ChartTooltip cursor={false} content={<ChartTooltipContent hideLabel />} />
             <Pie
             
               data={chartData}
               dataKey="value"  
               nameKey="name"  
-              innerRadius={80}
-              outerRadius={100}
-              strokeWidth={8}
+              innerRadius={40}
+              outerRadius={60}
+              strokeWidth={4}
               paddingAngle={1}
             
             >
@@ -95,7 +92,7 @@ export function Piechart({ chartData }: IChart) {
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Parcels
+                          %
                         </tspan>
                       </text>
                     );
