@@ -16,20 +16,21 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 
-const chartData = [
-  { date: "2024-01", speedpost: 450, expressparcel: 300, mediapost: 200, logisticpost: 100 },
-  { date: "2024-02", speedpost: 300, expressparcel: 200, mediapost: 100, logisticpost: 50 },
-  { date: "2024-03", speedpost: 200, expressparcel: 150, mediapost: 100, logisticpost: 50 },
-  { date: "2024-04", speedpost: 400, expressparcel: 250, mediapost: 150, logisticpost: 50 },
-  { date: "2024-05", speedpost: 200, expressparcel: 150, mediapost: 100, logisticpost: 50 },
-  { date: "2024-06", speedpost: 300, expressparcel: 200, mediapost: 100, logisticpost: 50 },
-  { date: "2024-07", speedpost: 500, expressparcel: 350, mediapost: 200, logisticpost: 150 },
-  { date: "2024-08", speedpost: 400, expressparcel: 250, mediapost: 150, logisticpost: 100 },
-  { date: "2024-09", speedpost: 300, expressparcel: 200, mediapost: 100, logisticpost: 50 },
-  { date: "2024-10", speedpost: 600, expressparcel: 450, mediapost: 300, logisticpost: 200 },
-  { date: "2024-11", speedpost: 700, expressparcel: 500, mediapost: 400, logisticpost: 250 },
-  { date: "2024-12", speedpost: 800, expressparcel: 600, mediapost: 500, logisticpost: 300 },
-]
+type ChartData = {
+  date: string
+  speedpost: number
+  expressparcel: number
+  mediapost: number
+  logisticpost: number
+}
+
+interface ItemTypeDashBoardProps {
+  chartData: ChartData[]
+}
+
+interface ItemTypeDashBoardProps {
+  dataType: "monthly" | "weekly" | "yearly"; 
+}
 
 const chartConfig = {
   activities: {
@@ -45,18 +46,17 @@ const chartConfig = {
   },
 }
 
-export function ItemTypeDashBoard() {
+export function ItemTypeDashBoard(
+  { chartData ,dataType }: ItemTypeDashBoardProps
+
+) {
   return (
     <Card className="w-full">
-      <CardHeader className="items-center">
-        <CardTitle>Service Usage Dashboard</CardTitle>
-        <CardDescription>Overview of service usage by month.</CardDescription>
-      </CardHeader>
       <CardContent>
         <ChartContainer className="w-[80%] justify-center mx-auto" config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
             <XAxis
-              dataKey="date"
+              dataKey={dataType}
               tickLine={false}
               tickMargin={10}
               axisLine={false}
@@ -66,18 +66,6 @@ export function ItemTypeDashBoard() {
               }}
               angle={-45} 
               textAnchor="end" 
-            />
-            <Bar
-              dataKey="running"
-              stackId="a"
-              fill="#cd314f"
-              radius={[0, 0, 4, 4]}
-            />
-            <Bar
-              dataKey="swimming"
-              stackId="a"
-              fill="var(--color-swimming)"
-              radius={[0, 0, 0, 0]}
             />
             
             {/* Bars */}

@@ -24,9 +24,13 @@ type ChartData = {
 interface ICheckBar {
   data: ChartData[];
   heading: string;
+
+}
+interface ICheckBar {
+  dataType: "monthly" | "weekly" | "yearly"; 
 }
 
-export function CheckBar({ data ,heading }: ICheckBar) {
+export function CheckBar({ data ,heading,dataType }: ICheckBar) {
   return (
     <Card>
       <CardHeader className="text-center">
@@ -37,7 +41,7 @@ export function CheckBar({ data ,heading }: ICheckBar) {
         <ChartContainer className="mx-auto " config={{ /* your config here */ }}>
           <BarChart width={500} height={300} data={data}>
             <XAxis
-              dataKey="date"
+              dataKey={dataType}
               tickLine={false}
               tickMargin={10}
               axisLine={false}

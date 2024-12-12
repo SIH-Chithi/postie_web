@@ -54,10 +54,7 @@ export function Piechart({ chartData }: IChart) {
 
   return (
     <Card className="flex w-full flex-col">
-      <CardHeader className="items-center pb-6">
-        <CardTitle>Parcel Type</CardTitle>
-        <CardDescription>Total Parcel Type for today</CardDescription>
-      </CardHeader>
+      
       <CardContent className="">
         <ChartContainer config={chartConfig} className="mx-auto w-full aspect-square max-h-[400px]">
           <PieChart className="h-full w-full">
