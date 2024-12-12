@@ -18,6 +18,7 @@ import {
 type ChartData = {
   date: string;
   check: number;
+  heading:string
 };
 
 interface ICheckBar {
@@ -28,8 +29,8 @@ export function CheckBar({ data }: ICheckBar) {
   return (
     <Card>
       <CardHeader className="text-center">
-        <CardTitle>Daily Check-Ins</CardTitle>
-        <CardDescription>Bar chart showing daily check-ins.</CardDescription>
+        <CardTitle>Daily </CardTitle>
+        <CardDescription>Bar chart showi.</CardDescription>
       </CardHeader>
       <CardContent className="mx-auto">
         <ChartContainer className="mx-auto " config={{ /* your config here */ }}>
