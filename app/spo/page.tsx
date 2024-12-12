@@ -11,9 +11,14 @@ import { ItemTypeDashBoard } from "@/components/ItemTypeDashBoard";
 import { ComplaintTable } from "@/components/ComplaintTable";
 import Statetopdashboard from "@/components/State-top-dashboard";
 import { Complaints } from "@/components/ComplaintsBar";
+<<<<<<< HEAD
 import { Modal } from "@/components/Modal";
 import { DropdownMenuCheckboxes } from "@/components/DashBoardDropDown";
 import {TableComponent} from "@/components/Table";
+=======
+import Map from "./services/map/page";
+import MapDestination from "./services/mapD/page";
+>>>>>>> d535aa630eb3bf6320540610410965c79e91cb10
 function page() {
 
   const [itemTypeDataType, setItemTypeDataType] = useState<"Monthly" | "Weekly" | "Yearly">("Monthly");
@@ -515,6 +520,7 @@ function page() {
                 <h2 className="text-lg font-semibold text-gray-800">
                   Top States
                 </h2>
+                
               </div>
               <div className="mt-4">
                 <Statetopdashboard state={stateData} />
@@ -542,6 +548,7 @@ function page() {
               <Complaints chartData={complaint} />
             </div>
 
+<<<<<<< HEAD
             <div className="bg-white p-1 shadow rounded-lg pt-2 flex flex-col">
               <h1 className="text-lg font-semibold text-center text-gray-800">
                 Delay Complaints
@@ -549,9 +556,26 @@ function page() {
               <Complaints chartData={serverComplaint} />
             </div>
           </div>
+=======
+              <div className="bg-white p-1 shadow rounded-lg pt-2 flex flex-col">
+                <h1 className="text-lg font-semibold text-center text-gray-800">Delay Complaints</h1>
+                <Complaints chartData={serverComplaint} />
+                
+                <div>
+                  
+              
+                </div>
+                
+                  </div>
+              </div>
+
+              
+              
+>>>>>>> d535aa630eb3bf6320540610410965c79e91cb10
         </div>
       </div>
     </div>
+    
   );
 }
 

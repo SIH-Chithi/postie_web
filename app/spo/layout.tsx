@@ -25,8 +25,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       { title: "Dashboard", url: "/spo", icon: MdDashboard },
       { title: "Check In", url: "/spo/services/checkIn", icon: FcInspection },
       { title: "Check Out", url: "/spo/services/checkOut", icon: MdQrCodeScanner },
-      { title: "Complaints", url: "/spo/services/complaints", icon: RiCustomerService2Fill },
-      
+      { title: "Complains", url: "/spo/services/complaints", icon: RiCustomerService2Fill },
+      { title: "Print Slip", url: "/spo/services/printSlip", icon: MdLocalPrintshop },
     ],
     []
   );
