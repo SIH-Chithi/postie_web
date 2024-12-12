@@ -5,6 +5,8 @@ import { FaBoxesPacking } from "react-icons/fa6";
 import { Linechart } from "@/components/LineChart";
 import { CheckBar } from "@/components/CheckBar";
 import { CheckRadial } from "@/components/Checkradial";
+import { FaArchive } from "react-icons/fa";
+import { FaBoxOpen } from "react-icons/fa6";
 
 const Page = () => {
   const LineData = [
@@ -70,7 +72,7 @@ const Page = () => {
     },
   ];
 
-  return (
+  return ( 
     <div className="min-h-screen overflow-y-auto max-h-screen bg-gray-100 p-6 md:p-8">
       {/* Dashboard Section */}
       <div className="grid  lg:grid-cols-[4fr,6fr] gap-6">
@@ -78,17 +80,17 @@ const Page = () => {
         <div className="grid grid-rows-2 gap-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all flex items-center">
-              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-green-500 text-white">
+              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-red-400 text-white">
                 <FaBox className="text-2xl" />
               </div>
               <div className="ml-4">
                 <p className="text-sm text-gray-500">Today's Check-In</p>
-                <p className="text-2xl font-bold text-green-500">+500</p>
+                <p className="text-2xl font-bold text-red-400">+500</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all flex items-center">
               <div className="h-14 w-14 flex items-center justify-center rounded-full bg-orange-500 text-white">
-                <FaBoxesPacking className="text-2xl" />
+                <FaBoxOpen className="text-2xl" />
               </div>
               <div className="ml-4">
                 <p className="text-sm text-gray-500">Old Check-In</p>
@@ -98,21 +100,21 @@ const Page = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all flex items-center">
-              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-blue-500 text-white">
-                <FaBoxesPacking className="text-2xl" />
+              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-yellow-500 text-white">
+                <FaArchive className="text-2xl" />
               </div>
               <div className="ml-4">
                 <p className="text-sm text-gray-500">Monthly</p>
-                <p className="text-2xl font-bold text-blue-500">+1500</p>
+                <p className="text-2xl font-bold text-yellow-500">+1500</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-all flex items-center">
-              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-purple-500 text-white">
+              <div className="h-14 w-14 flex items-center justify-center rounded-full bg-red-700 text-white">
                 <FaBoxesPacking className="text-2xl" />
               </div>
               <div className="ml-4">
                 <p className="text-sm text-gray-500">Weekly</p>
-                <p className="text-2xl font-bold text-purple-500">+200</p>
+                <p className="text-2xl font-bold text-red-700">+200</p>
               </div>
             </div>
           </div>
