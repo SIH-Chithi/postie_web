@@ -27,6 +27,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       { title: "Check Out", url: "/spo/services/checkOut", icon: MdQrCodeScanner },
       { title: "Complains", url: "/spo/services/complaints", icon: RiCustomerService2Fill },
       { title: "Print Slip", url: "/spo/services/printSlip", icon: MdLocalPrintshop },
+      { title: "National Heatmap Sources", url: "/spo/services/map", icon: MdLocalPrintshop },
+      { title: "National Heatmap Destination", url: "/spo/services/mapD", icon: MdLocalPrintshop },
+
+      
     ],
     []
   );

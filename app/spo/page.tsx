@@ -9,7 +9,8 @@ import { ItemTypeDashBoard } from "@/components/ItemTypeDashBoard";
 import { ComplaintTable } from "@/components/ComplaintTable";
 import Statetopdashboard from "@/components/state-top-dashboard";
 import { Complaints } from "@/components/ComplaintsBar";
-
+import Map from "./services/map/page";
+import MapDestination from "./services/mapD/page";
 function page() {
   const sateNumberItems = [
     {
@@ -234,6 +235,7 @@ function page() {
                 <h2 className="text-lg font-semibold text-gray-800">
                   Top States
                 </h2>
+                
               </div>
               <div className="mt-4">
                 <Statetopdashboard state={stateData} />
@@ -262,11 +264,21 @@ function page() {
               <div className="bg-white p-1 shadow rounded-lg pt-2 flex flex-col">
                 <h1 className="text-lg font-semibold text-center text-gray-800">Delay Complaints</h1>
                 <Complaints chartData={serverComplaint} />
+                
+                <div>
+                  
+              
                 </div>
+                
+                  </div>
               </div>
+
+              
+              
         </div>
       </div>
     </div>
+    
   );
 }
 
