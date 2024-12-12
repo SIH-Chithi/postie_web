@@ -24,7 +24,7 @@ export function CheckRadial({ chartData }: IChart) {
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Radial Chart - Service Type</CardTitle>
+        <CardTitle>Service Type</CardTitle>
         <CardDescription>Different types of services </CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">

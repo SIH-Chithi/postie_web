@@ -11,62 +11,63 @@ import { FaBoxOpen } from "react-icons/fa6";
 
 const Page = () => {
   const LineData = [
-    { day: "Monday", parcel: 186, document: 80, express : 100, letter: 50 },
-    { day: "Tuesday", parcel: 200, document: 90, express : 120, letter: 60 },
-    { day: "Wednesday", parcel: 150, document: 100, express : 130, letter: 70 },
-    { day: "Thursday", parcel: 250, document: 120, express : 140, letter: 80 },
-    { day: "Friday", parcel: 300, document: 150, express : 160, letter: 100 },
-    { day: "Saturday", parcel: 350, document: 180, express : 180, letter: 120 },
-    { day: "Sunday", parcel: 400, document: 200, express : 200, letter: 150 },
+    { day: "Monday", parcel: 160, document: 90, express : 200, letter: 70 },
+    { day: "Tuesday", parcel: 200, document: 100, express : 220, letter: 80 },
+    { day: "Wednesday", parcel: 150, document: 110, express : 230, letter: 90 },
+    { day: "Thursday", parcel: 250, document: 130, express : 240, letter: 100 },
+    { day: "Friday", parcel: 300, document: 160, express : 260, letter: 120 },
+    { day: "Saturday", parcel: 350, document: 190, express : 280, letter: 140 },
+    { day: "Sunday", parcel: 400, document: 210, express : 300, letter: 170 },
+    
   ];
 
   const chartData = [
-    { date: "2024-07-15", check: 450 },
-    { date: "2024-07-16", check: 380 },
-    { date: "2024-07-17", check: 520 },
-    { date: "2024-07-18", check: 140 },
+    { date: "2024-07-15", check: 250 },
+    { date: "2024-07-16", check: 300 },
+    { date: "2024-07-17", check: 500 },
+    { date: "2024-07-18", check: 200 },
     { date: "2024-07-19", check: 600 },
-    { date: "2024-07-20", check: 480 },
+    { date: "2024-07-20", check: 410 },
   ]
 
   const serviceData =[
   
   {
     name: "Economy",
-    value: 20,
+    value: 40,
     fill: "#fbe1e1"
   },{
     name: "Priority",
-    value: 12,
+    value: 22,
     fill: "#F7C2C1"
   },{
     name: "Regular",
-    value: 16,
+    value: 10,
     fill: "#ff7976"
   },{
     name: "Express",
-    value: 10,
+    value: 19,
     fill: "#ff5754"
   }]
 
   const containerData = [
     {
       containerId: "C123456",
-      totalConsignments: 120,
+      totalConsignments: 110,
       checkInDate: "2024-11-25",
       location: "NSH Delhi",
       notes: "This container is scheduled for transfer to Mumbai by 2024-11-27.",
     },
     {
       containerId: "C123457",
-      totalConsignments: 130,
+      totalConsignments: 100,
       checkInDate: "2024-11-26",
       location: "HPO Delhi",
       notes: "This container has been delivered to Chennai.",
     },
     {
       containerId: "C123458",
-      totalConsignments: 150,
+      totalConsignments: 110,
       checkInDate: "2024-11-27",
       location: "NSH Mumbai",
       notes: "This container is scheduled for transfer to Bangalore.",
@@ -122,7 +123,7 @@ const Page = () => {
         </div>
         <div className="bg-white p-6 rounded-lg shadow">
 
-          <CheckBar data={chartData} />
+          <CheckBar data={chartData} heading="Check Out" />
       </div>
         
       </div>

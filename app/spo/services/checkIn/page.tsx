@@ -121,7 +121,7 @@ const Page = () => {
         </div>
         <div className="bg-white p-6 rounded-lg shadow">
 
-          <CheckBar data={chartData} />
+          <CheckBar data={chartData} heading="Check In" />
       </div>
         
       </div>

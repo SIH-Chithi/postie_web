@@ -34,15 +34,15 @@ const chartConfig: ChartConfig = {
   },
 }
 
-export function Linechart({ chartData }: IChart) {
+export function ComplaintLinechart({ chartData }: IChart) {
   return (
-    <Card className="flex flex-col">
-      <CardHeader className="items-center pb-10">
-        <CardTitle>Parcel Type </CardTitle>
-        <CardDescription>Parcel type status for the last 7 days</CardDescription>
+    <Card >
+      <CardHeader className="items-center ">
+        <CardTitle>Complaint Trends </CardTitle>
+        <CardDescription>Complaint trends of the last 7 days</CardDescription>
       </CardHeader>
-      <CardContent className="flex-1 pb-0">
-        <ChartContainer config={chartConfig}>
+      <CardContent className="">
+        <ChartContainer className="mx-auto" config={chartConfig}>
           <LineChart
             data={chartData}
             margin={{
